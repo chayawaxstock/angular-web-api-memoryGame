@@ -1,0 +1,71 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 870px;
+    min-height: 489px;
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(1, 38, 66, 0.65);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.deck .card {
+    margin-bottom: 22px;
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.65);
+    pointer-events: auto;
+}
+
+.open {
+    transform: rotateY(180deg);
+    transition: 0.3s;
+    background: #2f91f9;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+.show {
+    font-size: 33px;
+}
+
+.match {
+    cursor: default;
+    background: #1bc45f;
+    font-size: 33px;
+}
+
+
+

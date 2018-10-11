@@ -1,0 +1,27 @@
+<aside class="profile-card">
+    <header>
+        <h1 *ngIf="currectUser" class="hoverZoomLink">
+             {{currectUser.Name}} 
+        </h1>
+        <h2>choose-partner:</h2>
+    </header>
+    <div class="profile-bio">
+        
+            <table class="table" *ngIf="listChoosePartners.length!=0; else elseBlock">
+                <thead>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of listChoosePartners">
+                    <td>{{user.Name}} </td>
+                    <td>{{user.Age}}</td>
+                    <td><button type="button" class="btn btn-primary" value="choose" (click)="choosePartner(user)">choose</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <ng-template #elseBlock>not have  player to play wait!!</ng-template>
+        
+    </div>
+</aside>

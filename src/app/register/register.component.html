@@ -1,0 +1,29 @@
+<div class="wrapper">
+        <div class="container">
+            <h1>Welcome</h1>
+            <form class="form" [formGroup]="formGroup" (ngSubmit)="submitRegister()" name="formUser">
+                <input type="text" placeholder="Enter Username" formControlName="Name" name="name">
+                <div class="help-block" *ngIf="formGroup.controls['Name'].errors&&formGroup.controls['Name'].touched">
+                    <p *ngFor="let err of obj.values(formGroup.controls['Name'].errors)">{{err}}</p>
+                </div>
+                <input type="number" placeholder="Enter Age" formControlName="Age" min="18" max="120" name="age">
+                <div class="help-block" *ngIf="formGroup.controls['Age'].errors&&formGroup.controls['Age'].touched">
+                    <p *ngFor="let err of obj.values(formGroup.controls['Age'].errors)">{{err}}</p>
+                </div>
+                <button type="submit" id="login-button" [disabled]="formGroup.invalid">Login</button>
+            </form>
+        </div>
+        
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>

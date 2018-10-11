@@ -1,0 +1,12 @@
+<div class="container">
+    <ul  class="deck">
+            <li class="card" *ngFor="let card of CardGameRandomDictionary" [class.open]="card['click']" >
+                <app-card [card]="card" (notify)='onClick($event)'></app-card>
+            </li>
+        </ul>
+</div>
+
+
+
+
+

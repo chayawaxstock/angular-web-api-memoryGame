@@ -1,0 +1,11 @@
+<p class="font" (click)="displayCard()" [class.ss]="card.value==null" *ngIf="card.value!=null||card['click'] else empty" [ngClass]="{
+  'red':card.value == userService.currentUser.Name,
+  'green':card.value ==this.userService.currectPartner.Name
+  }">
+  {{card.key}}
+</p>
+
+
+<ng-template #empty>
+  <p (click)="displayCard()" class="font">?</p>
+</ng-template>

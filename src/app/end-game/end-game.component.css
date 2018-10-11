@@ -1,0 +1,14 @@
+.card-body{
+    text-align: center;
+    font-size: 20px;
+   
+}
+
+.card-header{
+    font-size: 25px;
+}
+.card{
+    margin-top: 10%;
+    width: 300px;
+    margin-left: 40%;
+}

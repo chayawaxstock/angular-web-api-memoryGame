@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="player">
+        <div>Current player name:
+            <p [ngClass]="{
+            'red': currentNamePlayerNow== currentUser.Name,
+            'green': currentNamePlayerNow==currentPartner}">
+             {{currentNamePlayerNow}}
+            </p>
+        </div>
+    </div>
+
+    <div class="score">
+        <p>corrent game matching set</p>
+        <p class="green">scorePartnerUser: {{scorePartnerUser}}</p>
+        <p class="red">scoreCurrentUser: {{scoreCurrentUser}}</p>
+    </div>
+    <app-board [CardGameRandomDictionary]="CardGameRandomDictionary" (checkMatch)='checkMatch($event)'></app-board>
+</div>

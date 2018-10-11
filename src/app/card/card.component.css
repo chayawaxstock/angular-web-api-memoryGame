@@ -1,0 +1,29 @@
+
+.white{
+    size: 20px;
+    width: 125px;
+    height: 125px;
+    background-color: transparent;
+    color: black;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.font{
+    color: snow;
+    font-size: 25px;
+}
+.ss{ 
+    transform: rotateY(180deg);
+    font-size: 25px;
+    z-index: 12;
+}
+.red{
+    
+    color: red;
+}
+.green{
+    
+    color: green;
+}
